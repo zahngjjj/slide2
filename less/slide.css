@@ -1,0 +1,414 @@
+/* 定义jd主题色变量 */
+/* 1. 放样式初始化 */
+* {
+  margin: 0px;
+  padding: 0px;
+  /* 移动端都会设置盒模型为border-box */
+  box-sizing: border-box;
+  /* 去掉内边框 */
+  outline: 0;
+  /* 去除a标签的按住高亮背景色 */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+input,
+select {
+  /* 消除输入框和按钮的原生外观，在iOS上加上这个属性才能给按钮和输入框自定义样式 */
+  /* 另外，select加上这个属性后，select的高度就可以改变了 */
+  -webkit-appearance: none;
+}
+/* 去掉小圆点 */
+li {
+  list-style: none;
+}
+img {
+  /* 去除图片3px间隙 */
+  vertical-align: middle;
+}
+a {
+  background: transparent;
+  text-decoration: none;
+  /* 设置a标签的高亮背景色 手指按住的时候会出现 */
+  -webkit-tap-highlight-color: transparent;
+  color: #666;
+}
+/* 样式初始化 */
+html {
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 200px;
+}
+body {
+  margin: 0;
+  /* 默认网页字体都使用了14px */
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333333;
+  background-color: white;
+  height: 100%;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+a:active {
+  outline: 0;
+}
+a:active {
+  color: #006699;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+  border: 0;
+  outline: 0;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+html,
+button,
+input,
+select,
+textarea {
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+form,
+blockquote {
+  margin: 0;
+}
+ul,
+ol,
+li,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol {
+  list-style: none outside none;
+}
+h1,
+h2,
+h3 {
+  line-height: 2;
+  font-weight: normal;
+}
+h1 {
+  font-size: 18px;
+}
+h2 {
+  font-size: 16px;
+}
+h3 {
+  font-size: 14px;
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #cccccc;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #cccccc;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #cccccc;
+}
+/* 2. 放所有页面都会用到公共类 */
+/* 边框的公共类名 */
+.bt {
+  border-top: 1px solid #ccc;
+}
+.bb {
+  border-bottom: 1px solid #ccc;
+}
+.bl {
+  border-left: 1px solid #ccc;
+}
+.br {
+  border-right: 1px solid #ccc;
+}
+#header {
+  height: 0.45rem;
+  width: 100%;
+  background-color: #cc332a;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  z-index: 999;
+}
+#header .icon-logo {
+  display: block;
+  width: 0.7rem;
+  height: 0.4rem;
+  background-position: 0 -1.08rem;
+  padding-left: 0.1rem;
+  padding-top: 0.1rem;
+  background-image: url("../images/sprites.png");
+  background-size: 2rem 2rem;
+  background-origin: content-box;
+  background-clip: content-box;
+}
+#header form {
+  padding-left: 0.15rem;
+  padding-top: 0.05rem;
+  flex: 1;
+  position: relative;
+}
+#header form .icon-search {
+  width: 0.25rem;
+  height: 0.2rem;
+  background-position: -0.59rem -1.08rem;
+  position: absolute;
+  left: 0.22rem;
+  top: 0.1rem;
+}
+#header form input {
+  border-radius: 0.175rem;
+  height: 0.3rem;
+  padding-left: 0.35rem;
+}
+#header .login {
+  width: 0.5rem;
+  font-size: 0.15rem;
+  padding-top: 0.11rem;
+  padding-right: 0.12rem;
+  text-align: center;
+  color: #fff;
+}
+#footer {
+  z-index: 999;
+  background-color: #ccc;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+#footer ul {
+  display: flex;
+}
+#footer ul li {
+  height: 0.66rem;
+  width: 25%;
+  position: relative;
+}
+#footer ul li a {
+  left: 50%;
+  transform: translate(-50%);
+  display: block;
+  text-align: center;
+  width: 0.25rem;
+  height: 0.48rem;
+  background-image: url("../images/sprites.png");
+  background-position: -0.32rem -0.32rem;
+  background-size: 2rem 2rem;
+  background-origin: content-box;
+  background-clip: content-box;
+  padding-top: 0.1rem;
+  position: absolute;
+  font-size: 0.06rem;
+}
+#footer ul li a p {
+  position: absolute;
+  bottom: -0.04rem;
+}
+#banner {
+  width: 12.42rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#banner .swiper-container {
+  width: 12.42rem;
+}
+#banner .swiper-container img {
+  /* 轮播图全屏的和屏幕宽度有关可以使用vw */
+  height: 8.12rem;
+}
+#banner .swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+#banner .swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 0.27rem;
+}
+#main {
+  padding-top: 8.2rem;
+  width: 12.42rem;
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+#main .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+#main .swiper-container .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+#main .swiper-container .swiper-wrapper .swiper-slide {
+  font-size: 0.18rem;
+  height: auto;
+  padding-bottom: 0.5rem;
+  padding-left: 0.3rem;
+  padding-right: 0.5rem;
+}
